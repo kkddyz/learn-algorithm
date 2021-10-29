@@ -9,13 +9,13 @@ public class VertexNode {
     /**
      * 顶点保存的数据
      */
-    private String data;
+    protected String data;
 
     /**
      * 顶点的第一个邻点
      * first == null; // 说明没有邻点
      */
-    private AdjNode first;
+    protected AdjNode first;
 
     public VertexNode(String data, AdjNode first) {
         this.data = data;
