@@ -1,4 +1,4 @@
-package algorithm_ZJU.graph;
+package algorithm_ZJU.graph_structure;
 
 
 import java.io.File;
@@ -43,6 +43,11 @@ public abstract class Graph {
      * 打印图
      */
     public abstract void print();
+
+    /**
+     * 获取邻接点
+     */
+    public abstract Vertex[] getVertex(Vertex vertex);
 
 
     /**

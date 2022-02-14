@@ -1,9 +1,9 @@
-package algorithm_ZJU.graph;
+package algorithm_ZJU.graph_structure;
 
 /**
  * @author kkddyz
  * @date 2021/10/29
- * @descriptor 图的表示 邻接矩阵中的顶点
+ * @description 图的表示--邻接矩阵中的顶点
  */
 public class VertexNode {
     /**

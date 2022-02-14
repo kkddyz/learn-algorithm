@@ -1,4 +1,4 @@
-package algorithm_ZJU.graph;
+package algorithm_ZJU.graph_structure;
 
 /**
  * @author kkddyz

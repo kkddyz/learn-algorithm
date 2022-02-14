@@ -1,4 +1,4 @@
-package algorithm_ZJU.graph;
+package algorithm_ZJU.graph_structure;
 
 import java.io.File;
 
@@ -66,6 +66,35 @@ public class LinkedGraph extends Graph {
             }
 
         }
+    }
+
+    @Override
+    public Vertex[] getVertex(Vertex vertex) {
+        // 1. 查找到对应的VertexNode
+        VertexNode vertexNode = adjList[vertex.index];
+        // 2. 循环遍历AdjNode查询数量,创建邻接点的数组
+        AdjNode head = vertexNode.first;
+        int adjNodeNum = 0;
+        while (head != null) {
+            head = head.next;
+            adjNodeNum++;
+        }
+        Vertex[] adjArr = new Vertex[adjNodeNum];
+
+
+        // 3.循环遍历AdjNode，填入adjArr
+        head = vertexNode.first;
+        int i = 0;
+        while (head != null) {
+            int index = head.index;
+            int weight = head.weight;
+            head = head.next;
+
+        }
+
+        // 需要一个新的数据结构表示邻点。
+        return adjArr;
+
     }
 
     @Override

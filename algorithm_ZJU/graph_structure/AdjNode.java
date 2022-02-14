@@ -1,9 +1,9 @@
-package algorithm_ZJU.graph;
+package algorithm_ZJU.graph_structure;
 
 /**
  * @author kkddyz
  * @date 2021 /10/29
- * @descriptor 图的表示 邻接矩阵中的邻点 AdjNode只记录边相关的信息 邻点的编号，距离。
+ * @description 图的表示--邻接矩阵中的邻点
  */
 public class AdjNode {
 
