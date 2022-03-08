@@ -1,6 +1,4 @@
-package leetcode.动态规划;
-
-import java.util.Arrays;
+package leetcode.dp;
 
 /**
  * @author kkddyz

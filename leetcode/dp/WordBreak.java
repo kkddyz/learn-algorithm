@@ -1,4 +1,4 @@
-package leetcode.动态规划;
+package leetcode.dp;
 
 import java.util.ArrayList;
 import java.util.HashSet;
