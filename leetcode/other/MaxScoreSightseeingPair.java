@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.other;
 
 /**
  * @author kkddyz
