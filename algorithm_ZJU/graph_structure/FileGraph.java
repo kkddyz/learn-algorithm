@@ -4,6 +4,7 @@ package algorithm_ZJU.graph_structure;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -11,9 +12,10 @@ import java.util.Scanner;
  *
  * @author kkddyz
  * @date 2021 /10/29
- * @description 使用流创建graph对象
+ * @description 使用流创建graph对象，在Constructor中定义创建图的流程(不涉及图的底层实现) -- 无向图
  */
-public abstract class Graph {
+public abstract class FileGraph {
+
     /**
      * 顶点数量
      */
@@ -47,13 +49,13 @@ public abstract class Graph {
     /**
      * 获取邻接点
      */
-    public abstract Vertex[] getVertex(Vertex vertex);
+    public abstract List<Vertex> getAdjNodes(int vertexId);
 
 
     /**
      * 使用File创建图的流程，子类通过实现抽象方法，完成对象创建。
      */
-    public Graph(File file) {
+    public FileGraph(File file) {
         try {
             // 读取文件流
             Scanner in = new Scanner(new FileInputStream(file));
@@ -71,7 +73,7 @@ public abstract class Graph {
 
             //  插入顶点数据 -- 先插入顶点，不然使用邻接表的时候，AdjNode没地方挂
             for (int i = 0; i < vertexNum; i++) {
-                //i是Vertex的下标
+                //i是Vertex的索引
                 Vertex vertex = new Vertex(i, in.next());
                 insertVertex(vertex);
             }
@@ -86,8 +88,6 @@ public abstract class Graph {
                 insertEdge(edge1);
                 insertEdge(edge2);
             }
-
-
         } catch (FileNotFoundException e) {
             System.out.println("未找到初始化文件 '" + file + "' ，请检查路径");
         }

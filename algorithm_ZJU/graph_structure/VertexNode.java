@@ -3,7 +3,7 @@ package algorithm_ZJU.graph_structure;
 /**
  * @author kkddyz
  * @date 2021/10/29
- * @description 图的表示--邻接矩阵中的顶点
+ * @description 图的表示--邻接矩阵中的顶点(链表头)
  */
 public class VertexNode {
     /**
@@ -12,13 +12,13 @@ public class VertexNode {
     protected String data;
 
     /**
-     * 顶点的第一个邻点
-     * first == null; // 说明没有邻点
+     * adjNode组成的链表的头节点
+     * vertexNode.adjNode == null 说明没有邻点
      */
-    protected AdjNode first;
+    protected AdjNode adjNode;
 
-    public VertexNode(String data, AdjNode first) {
+    public VertexNode(String data, AdjNode adjNode) {
         this.data = data;
-        this.first = first;
+        this.adjNode = adjNode;
     }
 }

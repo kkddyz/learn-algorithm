@@ -8,17 +8,17 @@ package algorithm_ZJU.graph_structure;
 public class AdjNode {
 
     /**
-     * 相邻结点的下标 -- VertexNode保存在数组中的下标
+     * 邻结点的索引
      */
     protected int index;
 
     /**
-     * 权重
+     * 权重 vertexNode到adjNode的距离
      */
     protected int weight;
 
     /**
-     * 指向下一个邻点
+     * 指向下一个AdjNode
      */
     protected AdjNode next;
 

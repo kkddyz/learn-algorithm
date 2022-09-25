@@ -21,4 +21,12 @@ public class Vertex {
         this.index = index;
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "Vertex{" +
+                "index=" + index +
+                ", date='" + date + '\'' +
+                '}';
+    }
 }
